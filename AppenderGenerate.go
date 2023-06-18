@@ -1,27 +1,29 @@
 package main
 
 import (
-	f "fmt"
 	"flag"
+	f "fmt"
 )
+
 func main() {
 	var file_name string
 	var java_package string
 	var level string
-//	var help string
-/*	help := `Скрипт использует 3 аргумента, для вывода logback.xml по шаблону
-Пример: ./logger com.panbet.service.push.service.DeviceRegistrationService devices info
-Где - 
-  1.LOGGER - имя класса, пример: com.panbet.web.managers.account.AccountManager
-  2.LOGNAME - просто имя файла лога, указывается без расширения(!)
-  3.LEVEL - уровень логирования. info | debug
-  `
-*/
+	//	var help string
+	/*	help := `Скрипт использует 3 аргумента, для вывода logback.xml по шаблону
+	Пример: ./logger com.panbet.service.push.service.DeviceRegistrationService devices info
+	Где -
+	  1.LOGGER - имя класса, пример: com.panbet.web.managers.account.AccountManager
+	  2.LOGNAME - просто имя файла лога, указывается без расширения(!)
+	  3.LEVEL - уровень логирования. info | debug
+	  `
+	*/
 	flag.StringVar(&file_name, "f", "common", "Default filename: common.log")
 	flag.StringVar(&java_package, "j", "com.panbet", "Default package: com.panbet")
 	flag.StringVar(&level, "l", "info", "Default logger level: info")
-//	flag.TextVar(&help, "h", "man page", "If agrs < 3: help page")
+	//	flag.TextVar(&help, "h", "man page", "If agrs < 3: help page")
 	flag.Parse()
+
 	logger_generator(java_package, file_name, level)
 }
 

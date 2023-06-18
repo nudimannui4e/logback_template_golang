@@ -11,7 +11,7 @@ func main() {
 	var java_package string
 	var level string
 	var help bool
-	/*	help := `Скрипт использует 3 аргумента, для вывода logback.xml по шаблону
+	/* `Скрипт использует 3 аргумента, для вывода logback.xml по шаблону
 	Пример: ./logger com.panbet.service.push.service.DeviceRegistrationService devices info
 	Где -
 	  1.LOGGER - имя класса, пример: com.panbet.web.managers.account.AccountManager

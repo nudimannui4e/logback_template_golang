@@ -1,8 +1,8 @@
 package main
 
-import {
+import (
 	f "fmt"
-}
+)
 
 func main() {
 	var originalCount int = 10

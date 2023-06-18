@@ -1,6 +1,7 @@
 package main
+
 import "fmt"
 
-func main(){
+func main() {
 	Fmt.Println("Hello from GO!")
 }

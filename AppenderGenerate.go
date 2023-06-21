@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"strings"
 	f "fmt"
+	"strings"
 )
 
 func main() {
@@ -11,16 +11,9 @@ func main() {
 	var java_package string
 	var level string
 	var help bool
-	/* `Скрипт использует 3 аргумента, для вывода logback.xml по шаблону
-	Пример: ./logger com.panbet.service.push.service.DeviceRegistrationService devices info
-	Где -
-	  1.LOGGER - имя класса, пример: com.panbet.web.managers.account.AccountManager
-	  2.LOGNAME - просто имя файла лога, указывается без расширения(!)
-	  3.LEVEL - уровень логирования. info | debug
-	  `
-	*/
+
 	flag.StringVar(&file_name, "f", "common", "output file [common.log, error.log, rabbitmq.log]")
-	flag.StringVar(&java_package, "j", "com.panbet", "package [com.worldline, com.rabbit]")
+	flag.StringVar(&java_package, "p", "com.panbet", "package [com.worldline, com.rabbit]")
 	flag.StringVar(&level, "l", "info", "level [warn, trace, info, error]")
 	flag.BoolVar(&help, "h", false, "This page")
 	flag.Parse()

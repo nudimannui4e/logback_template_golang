@@ -45,7 +45,7 @@ func logger_generator(logger string, logname string, level string) {
    <appender-ref ref="` + logname + `_FILE"/>
 </appender>
 <logger name="` + logger + `" additivity="false" level="` + level + `">
-    <appender-ref ref="` + logname + `_FILE"/>
+    <appender-ref ref="` + logname + `_ROLL"/>
 </logger>
 <!-- END ` + logname + `.log -->
 	`)

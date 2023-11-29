@@ -41,7 +41,7 @@ func logger_generator(java_package string, file_name string, level string) {
    <appender-ref ref="` + strings.ToUpper(file_name) + `_FILE"/>
 </appender>
 <logger name="` + java_package + `" additivity="false" level="` + strings.ToUpper(level) + `">
-    <appender-ref ref="` + strings.ToUpper(file_name) + `_FILE"/>
+    <appender-ref ref="` + strings.ToUpper(file_name) + `_ROLL"/>
 </logger>
 <!-- END ` + strings.ToUpper(file_name) + `.log -->
 `)
